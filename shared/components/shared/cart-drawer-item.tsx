@@ -30,7 +30,7 @@ const CartDrawerItem:React.FC<Props> = ({
     <div className={cn('flex bg-white p-5 gap-6', {
         'opacity-50 pointer-events-none' : disabled
     },className)}>
-       <CartItem.Image src={flavor.imageUrl || imageUrl} />
+       <CartItem.Image src={flavor?.imageUrl || imageUrl} />
        
        <div className="flex-1">
         <CartItem.Info flavor={flavor} details={details} name={name}/>

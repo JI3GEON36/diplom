@@ -35,6 +35,27 @@ async function up() {
                 verified: new Date(),
                 role: 'USER'
             },
+               {
+                fullName: 'User 1',
+                email:'qwerty@test.ru',
+                password:hashSync('111111',  10),
+                verified: new Date(),
+                role: 'USER'
+            },
+               {
+                fullName: 'User 2',
+                email:'danilZombe@test.ru',
+                password:hashSync('111111',  10),
+                verified: new Date(),
+                role: 'USER'
+            },
+               {
+                fullName: 'User 3',
+                email:'papaevgenister@test.ru',
+                password:hashSync('111111',  10),
+                verified: new Date(),
+                role: 'USER'
+            },
             {
                 fullName: 'Admin TEST',
                 email:'admin@test.ru',
@@ -60,16 +81,13 @@ async function up() {
     ]
   });
 
-  const flavors = await prisma.flavor.findMany();
-
-
     await prisma.product.createMany({
         data: products
     })
 
 const protein1 = await prisma.product.create({
     data: {
-      name: 'Протеин1',
+      name: 'BombBar',
       imageUrl:
         'https://avatars.mds.yandex.net/get-mpic/12438903/2a00000193d0f32e8c614415dca25ae13174/orig',
       categoryId: 1,
@@ -78,7 +96,7 @@ const protein1 = await prisma.product.create({
 
   const protein2 = await prisma.product.create({
     data: {
-      name: 'Протеин2',
+      name: 'Optimum Nutrition',
       imageUrl:
         'https://avatars.mds.yandex.net/get-mpic/12519262/2a0000019aa673fa1371d393bc076c3ba4aa/orig',
       categoryId: 1,
@@ -87,7 +105,7 @@ const protein1 = await prisma.product.create({
 
   const protein3 = await prisma.product.create({
     data: {
-      name: 'Протеин3',
+      name: 'PrimeKraft',
       imageUrl:
         'https://avatars.mds.yandex.net/get-mpic/12280826/2a00000193aa6cdc13120e768a852413b9d6/orig',
       categoryId: 1,
@@ -209,10 +227,22 @@ await prisma.productFlavor.createMany({
      await prisma.cart.createMany({
       data: [
         { userId: 1,
-          totalAmount:0,
+          totalAmount:1100,
           token: '11111'
         },
          { userId: 2,
+          totalAmount:900,
+          token: '11112'
+        },
+         { userId: 3,
+          totalAmount:543,
+          token: '11113'
+        },
+         { userId: 4,
+          totalAmount:290,
+          token: '11114'
+        },
+         { userId: 5,
           totalAmount:0,
           token: '22222'
         },

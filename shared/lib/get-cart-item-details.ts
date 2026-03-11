@@ -1,5 +1,4 @@
 import { mapProductType, ProductSize, ProductType } from "../contansts/pizza";
-import { CartStateitem } from "./get-cart-details";
 
 const getCartItemDetails = (
     type?:ProductType,

@@ -38,7 +38,7 @@ const Header:React.FC<Props> = ({className, hasSearch = true, hasCart = true}) =
                 {/* ..левая часть */}
             <Link href={"/"}>
                 <div className="flex items-center gap-4">
-                <Image src="/logo.jpg" alt="Logo" width={90} height={90} />
+                <Image src="/logo.png" alt="Logo" width={90} height={90} />
                 <div>
                     <h1 className="text-2xl uppercase font-black">Test</h1>
                     <p className="text-sm text-gray-400 leading-3">Test Desc</p>

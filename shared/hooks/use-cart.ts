@@ -1,7 +1,5 @@
 import React from "react"
 import { useCartStore } from "../store/cart"
-import { useShallow } from "zustand/shallow"
-import { CartItem } from "@prisma/client"
 import { createCartItemValue } from "../services/dto/cart.dto"
 import { CartStateitem } from "../lib/get-cart-details"
 

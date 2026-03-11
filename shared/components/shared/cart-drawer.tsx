@@ -27,6 +27,7 @@ interface Props {
 const CartDrawer:React.FC<Props> = ({children}) => {
     
     const {totalAmount, items, updateItemQuantity, removeCartItem } = useCart();
+    
 
     const onClickCountButton = (id:number, quantity: number, type: 'plus' | 'minus') => {
         const newQuantity = type == 'plus' ? quantity + 1 : quantity - 1

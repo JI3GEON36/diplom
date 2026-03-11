@@ -12,6 +12,7 @@ import { updateUserInfo } from '@/app/actions';
 import Container from './container';
 import FormInput from './form-components/form-input';
 import { Button } from '../ui/button';
+import Link from 'next/link';
 
 interface Props {
   data: User;
@@ -64,6 +65,12 @@ export const ProfileForm: React.FC<Props> = ({ data }) => {
 
           <FormInput type="password" name="password" label="Новый пароль" required />
           <FormInput type="password" name="confirmedPassword" label="Повторите пароль" required />
+
+          <Link href={'/profile/orders'}>
+              <Button disabled={form.formState.isSubmitting} className="text-base mt-10" type="submit">
+                Мои заказы
+              </Button>
+          </Link>
 
           <Button disabled={form.formState.isSubmitting} className="text-base mt-10" type="submit">
             Сохранить
